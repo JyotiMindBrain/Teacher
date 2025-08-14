@@ -18,6 +18,8 @@ import Communication from "./components/Communication/Communication";
 import DiscussionForum from "./components/Communication/DiscussionForum";
 import CreateTestQuiz from "./components/TestQuiz/CreateTestQuiz";
 import ViewTest from "./components/TestQuiz/ViewTest";
+import StudentReport from "./components/TestQuiz/StudentReport";
+import LeaveRequestTable from "./components/classroom/Attendance/LeaveRequestTable";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -46,6 +48,8 @@ function App() {
             <Route path="/discussion" element={<DiscussionForum />} />
             <Route path="/tests" element={<CreateTestQuiz />} />
             <Route path="/test_view" element={<ViewTest />} />
+            <Route path="/text_report" element={<StudentReport />} />
+            <Route path="/classroom/leave" element={<LeaveRequestTable />} />
             {/* <Route path="/classes" element={<Classes />} /> */}
           </Routes>
         </div>

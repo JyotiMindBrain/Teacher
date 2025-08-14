@@ -41,29 +41,52 @@ const Attendance = () => {
                         View Records
                     </button>
                 </Link>
+                <Link to="/classroom/leave">
+                    <button className="px-5 py-2 bg-white text-white-700 border border-gray-300 rounded-lg shadow hover:bg-blue-800 hover:text-white">
+                        Leave Request
+                    </button>
+                </Link>
             </div>
 
             {/* Unified Layout Card */}
             <div className="bg-white shadow rounded-lg p-4 md:p-6">
                 {/* Filters */}
-                <div className="mb-6">
-                    <h2 className="text-lg font-semibold text-gray-700 mb-4">
+                <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
+                    <h2 className="text-lg font-semibold text-gray-800">
                         Mark Attendance
                     </h2>
-                    <div className="flex flex-col md:flex-row md:items-center gap-4">
+
+                    <div className="flex items-center gap-3">
+                        {/* Date Picker */}
                         <input
                             type="date"
-                            className="p-3 border border-gray-300 rounded-lg text-gray-600 w-full md:w-auto flex-1"
-                            placeholder="dd-mm-yyyy"
+                            defaultValue="2025-07-22"
+                            className="border border-gray-300 text-gray-700 px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-purple-500"
                         />
-                        <select className="p-3 border border-gray-300 rounded-lg text-gray-600 w-full md:w-auto flex-1">
-                            <option>Class - 10</option>
+
+                        {/* Class Dropdown */}
+                        <select
+                            defaultValue="10"
+                            className="border border-gray-300 text-gray-700 px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-purple-500"
+                        >
+                            <option value="9">Class - 9</option>
+                            <option value="10">Class - 10</option>
+                            <option value="11">Class - 11</option>
+                            <option value="12">Class - 12</option>
                         </select>
-                        <select className="p-3 border border-gray-300 rounded-lg text-gray-600 w-full md:w-auto flex-1">
-                            <option>Section - A</option>
+
+                        {/* Section Dropdown */}
+                        <select
+                            defaultValue="A"
+                            className="border border-gray-300 text-gray-700 px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-purple-500"
+                        >
+                            <option value="A">Section - A</option>
+                            <option value="B">Section - B</option>
+                            <option value="C">Section - C</option>
                         </select>
                     </div>
                 </div>
+
 
                 {/* Table */}
                 <div className="overflow-x-auto rounded-lg">
@@ -131,7 +154,7 @@ const Attendance = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

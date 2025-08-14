@@ -46,6 +46,11 @@ const AttendanceRecords = () => {
                         View Records
                     </button>
                 </Link>
+                <Link to="/classroom/leave">
+                    <button className="px-5 py-2 bg-white text-white-700 border border-gray-300 rounded-lg shadow hover:bg-blue-800 hover:text-white">
+                        Leave Request
+                    </button>
+                </Link>
             </div>
 
             {/* Table */}

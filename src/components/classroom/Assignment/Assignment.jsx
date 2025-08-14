@@ -44,49 +44,97 @@ const Assignment = () => {
                     <span>/</span>
                     <span>Assignment</span>
                     <span>/</span>
-                    <span className="text-purple-600 font-semibold">Assignment</span>
+                    <span className="text-blue-600 font-semibold">Assignment</span>
                 </div>
             </div>
 
             {/* Assignment Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div className="bg-white shadow-md rounded-lg p-4">
-                    <h3 className="text-sm font-semibold text-gray-700">
-                        MATH301-Linear Algebra
-                    </h3>
-                    <p className="text-xs text-green-600 font-medium mb-2">
-                        Due in 5 days
-                    </p>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{ width: "65%" }}></div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 w-80 relative">
+                    {/* Left accent bar */}
+                    <div className="absolute top-0 left-0 h-full w-1 bg-green-400 rounded-l-lg"></div>
+
+                    {/* Top Row */}
+                    <div className="flex justify-between items-start mb-2">
+                        <h2 className="text-gray-800 font-medium text-sm">
+                            MATH301 - Linear Algebra
+                        </h2>
+                        <span className="text-xs text-green-500 font-medium bg-green-100">
+                            Due in 5 days
+                        </span>
                     </div>
-                    <p className="text-gray-600 text-sm">Submissions 13/20</p>
+
+                    {/* Submissions */}
+                    <div className="flex justify-between items-center text-gray-600 text-sm mb-2">
+                        <span>Submissions</span>
+                        <span className="font-medium">13/20</span>
+                    </div>
+
+                    {/* Progress Bar */}
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                        <div
+                            className="bg-teal-400 h-2 rounded-full"
+                            style={{ width: `${(13 / 20) * 100}%` }}
+                        ></div>
+                    </div>
                 </div>
 
-                <div className="bg-white shadow-md rounded-lg p-4">
-                    <h3 className="text-sm font-semibold text-gray-700">
-                        MATH301-Linear Algebra
-                    </h3>
-                    <p className="text-xs text-red-600 font-medium mb-2">
-                        Due in 2 days
-                    </p>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div className="bg-red-500 h-2 rounded-full" style={{ width: "40%" }}></div>
-                    </div>
-                    <p className="text-gray-600 text-sm">Submissions 8/20</p>
-                </div>
 
-                <div className="bg-white shadow-md rounded-lg p-4">
-                    <h3 className="text-sm font-semibold text-gray-700">
-                        MATH301-Linear Algebra
-                    </h3>
-                    <p className="text-xs text-green-600 font-medium mb-2">
-                        Due in 5 days
-                    </p>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{ width: "65%" }}></div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 w-80 relative">
+                    {/* Left accent bar */}
+                    <div className="absolute top-0 left-0 h-full w-1 bg-green-400 rounded-l-lg"></div>
+
+                    {/* Top Row */}
+                    <div className="flex justify-between items-start mb-2">
+                        <h2 className="text-gray-800 font-medium text-sm">
+                            MATH301-Linear Algebra
+                        </h2>
+                        <span className="text-xs text-red-600 font-medium bg-red-100">
+                            Due in 2 days
+                        </span>
                     </div>
-                    <p className="text-gray-600 text-sm">Submissions 13/20</p>
+
+                    {/* Submissions */}
+                    <div className="flex justify-between items-center text-gray-600 text-sm mb-2">
+                        <span>Submissions</span>
+                        <span className="font-medium">8/20</span>
+                    </div>
+
+                    {/* Progress Bar */}
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                        <div
+                            className="bg-red-400 h-2 rounded-full"
+                            style={{ width: `${(8 / 20) * 100}%` }}
+                        ></div>
+                    </div>
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 w-80 relative">
+                    {/* Left accent bar */}
+                    <div className="absolute top-0 left-0 h-full w-1 bg-green-400 rounded-l-lg"></div>
+
+                    {/* Top Row */}
+                    <div className="flex justify-between items-start mb-2">
+                        <h2 className="text-gray-800 font-medium text-sm">
+                            MATH301 - Linear Algebra
+                        </h2>
+                        <span className="text-xs text-green-600 font-medium bg-green-100">
+                            Due in 5 days
+                        </span>
+                    </div>
+
+                    {/* Submissions */}
+                    <div className="flex justify-between items-center text-gray-600 text-sm mb-2">
+                        <span>Submissions</span>
+                        <span className="font-medium">13/20</span>
+                    </div>
+
+                    {/* Progress Bar */}
+                    <div className="w-full bg-gray-100 rounded-full h-2">
+                        <div
+                            className="bg-teal-400 h-2 rounded-full"
+                            style={{ width: `${(13 / 20) * 100}%` }}
+                        ></div>
+                    </div>
                 </div>
             </div>
 
@@ -99,12 +147,12 @@ const Assignment = () => {
                 <Link
                     to="/classroom/assignments_view"
                 >
-                <button className="px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-lg shadow hover:bg-blue-700 hover:text-white">View Assignments</button>
+                    <button className="px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-lg shadow hover:bg-blue-700 hover:text-white">View Assignments</button>
                 </Link>
                 <Link
                     to="/classroom/assignments_submission"
                 >
-                <button className="px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-lg shadow hover:bg-blue-700 hover:text-white">Student Submissions</button>
+                    <button className="px-5 py-2 bg-white text-gray-700 border border-gray-200 rounded-lg shadow hover:bg-blue-700 hover:text-white">Student Submissions</button>
                 </Link>
             </div>
 

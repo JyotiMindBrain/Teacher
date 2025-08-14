@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookOpen } from "react-icons/fa";
+import {FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import {
     FaBook,
     FaClipboardList,
@@ -27,6 +28,13 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
     return (
         <>
+            {/* Sidebar toggle button (top right corner) */}
+            <button
+                className="fixed top-4 right-4 z-50 bg-black border shadow-md p-2 rounded-full hover:bg-gray-100 md:hidden"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {isOpen ? <FaArrowLeft size={18} /> : <FaArrowRight size={18} />}
+            </button>
             {/* Mobile overlay */}
             {isOpen && (
                 <div
@@ -95,8 +103,8 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                                             to={item.to}
                                             onClick={() => setIsOpen(false)}
                                             className={`block px-2 py-1 rounded-md hover:bg-blue-50 hover:text-blue-700 ${currentPath === item.to
-                                                    ? "text-blue-700 font-semibold"
-                                                    : "text-gray-600 hover:text-blue-700"
+                                                ? "text-blue-700 font-semibold"
+                                                : "text-gray-600 hover:text-blue-700"
                                                 }`}
                                         >
                                             {item.label}
@@ -132,7 +140,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                             className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-blue-100 hover:text-blue-700"
                             onClick={() => setIsOpen(false)}
                         >
-                            <FaCalendarAlt size={20}/> Performance Analytics
+                            <FaCalendarAlt size={20} /> Performance Analytics
                         </Link>
                     </li>
                     <li>

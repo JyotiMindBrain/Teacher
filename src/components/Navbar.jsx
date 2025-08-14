@@ -13,7 +13,7 @@ const Navbar = ({ setIsSidebarOpen }) => {
       const now = new Date();
       const optionsDate = { day: "numeric", month: "short", year: "numeric" };
       const optionsTime = { hour: "numeric", minute: "numeric", hour12: true };
-      const dateStr = now.toLocaleDateString("en-IN", optionsDate);
+      const dateStr = now.toLocaleDateString("en-IN", optionsDate,);
       const timeStr = now.toLocaleTimeString("en-IN", optionsTime);
       setDateTime(`${timeStr} | ${dateStr}`);
     };
@@ -62,8 +62,8 @@ const Navbar = ({ setIsSidebarOpen }) => {
           <FaBars />
         </button>
         <div className="hidden md:block">
-          <h2 className="text-lg font-semibold">Hello Jyoti Prakash</h2>
-          <p className="text-sm text-gray-500">{dateTime}</p>
+          <h2 className="text-lg font-semibold text-blue-600">Hello Jyoti Prakash</h2>
+          <p className="text-sm text-blue-500">{dateTime}</p>
         </div>
       </div>
 
